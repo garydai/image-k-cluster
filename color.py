@@ -56,8 +56,8 @@ class KMeans(object):
         # 上一次中心点的损失
         self.last_cost = 0.0
         # 从指定目录加载文件
-        f = open(file_name, 'r')
-        img = Image.open("a.png")
+     #   f = open(file_name, 'r')
+        img = Image.open(file_name)
         sequence = img.getdata()
         #for color in sequence:
          #   print color
@@ -180,5 +180,6 @@ class KMeans(object):
         print '本轮损失为：',total_cost
         return total_cost
 if __name__ == '__main__':
-    km = KMeans('color.txt')
-    km.start(5)
+    image = os.sys.argv[1]
+    km = KMeans(image)
+    km.start(3)
